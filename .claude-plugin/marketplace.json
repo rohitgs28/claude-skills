@@ -18,7 +18,10 @@
         "./skills/repo-polisher",
         "./skills/code-reviewer",
         "./skills/test-author",
-        "./skills/commit-and-pr"
+        "./skills/commit-and-pr",
+        "./skills/debugger",
+        "./skills/tech-design-doc",
+        "./skills/security-review"
       ]
     },
     {
@@ -28,7 +31,8 @@
       "strict": false,
       "skills": [
         "./skills/prd-writer",
-        "./skills/user-stories"
+        "./skills/user-stories",
+        "./skills/competitive-analysis"
       ]
     }
   ]

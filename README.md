@@ -6,7 +6,8 @@ reusable instruction set that teaches Claude to do one job well — reviewing a
 diff, writing a PRD, polishing a repo — the same way every time.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-6-blue.svg)](#whats-inside)
+[![CI](https://github.com/rohitgs28/claude-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/rohitgs28/claude-skills/actions/workflows/ci.yml)
+[![Skills](https://img.shields.io/badge/skills-10-blue.svg)](#whats-inside)
 [![Agent Skills spec](https://img.shields.io/badge/spec-agentskills.io-black.svg)](https://agentskills.io/specification)
 
 ## What's inside
@@ -19,6 +20,9 @@ diff, writing a PRD, polishing a repo — the same way every time.
 | [`code-reviewer`](skills/code-reviewer) | Review a diff/PR like a senior engineer — correctness, security, design — reported by severity with concrete fixes. |
 | [`test-author`](skills/test-author) | Write meaningful tests that assert real behavior and cover the risky paths, not coverage filler. |
 | [`commit-and-pr`](skills/commit-and-pr) | Write clear Conventional-Commit messages and reviewer-friendly PR descriptions from a diff. |
+| [`debugger`](skills/debugger) | Find a bug's root cause systematically — reproduce, isolate, hypothesize, verify — instead of guessing at fixes. |
+| [`tech-design-doc`](skills/tech-design-doc) | Write an RFC / design doc: context, goals, proposed design, alternatives considered, and risks. |
+| [`security-review`](skills/security-review) | Review code/diffs for vulnerabilities (injection, authz, secrets, SSRF) with severity-ranked, actionable findings. |
 
 ### Product
 
@@ -26,6 +30,7 @@ diff, writing a PRD, polishing a repo — the same way every time.
 |-------|--------------|
 | [`prd-writer`](skills/prd-writer) | Turn a feature idea into a crisp, decision-ready Product Requirements Document. |
 | [`user-stories`](skills/user-stories) | Break a feature/PRD into INVEST user stories with Given/When/Then acceptance criteria, and prioritize with RICE/MoSCoW. |
+| [`competitive-analysis`](skills/competitive-analysis) | Compare competitors across buyer-relevant dimensions in a matrix and draw out positioning, gaps, and recommendations. |
 
 ## Install
 
@@ -64,6 +69,14 @@ skills/<name>/
 The `description` field is what triggers the skill, so it states both *what the
 skill does* and *when to use it*. See [`CLAUDE.md`](CLAUDE.md) for the
 conventions used in this repo and how to add a new skill.
+
+## Development
+
+The marketplace and every skill's frontmatter are validated in CI on each push and PR:
+
+```bash
+python scripts/validate.py
+```
 
 ## Contributing
 
