@@ -1,0 +1,35 @@
+{
+  "name": "rohitgs28-skills",
+  "owner": {
+    "name": "Rohit Gollarahalli",
+    "email": "rohit.gs28@gmail.com"
+  },
+  "metadata": {
+    "description": "Generic, production-ready Agent Skills for software engineering and product work.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "software-engineering-skills",
+      "description": "Skills for everyday software engineering: modernizing repositories, reviewing diffs, writing tests, and authoring commits and pull requests.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/repo-polisher",
+        "./skills/code-reviewer",
+        "./skills/test-author",
+        "./skills/commit-and-pr"
+      ]
+    },
+    {
+      "name": "product-skills",
+      "description": "Skills for product work: writing product requirements documents and turning ideas into prioritized user stories with acceptance criteria.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/prd-writer",
+        "./skills/user-stories"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python (for any helper scripts)
+__pycache__/
+*.pyc
